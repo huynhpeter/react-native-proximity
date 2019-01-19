@@ -24,8 +24,11 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNEstimoteProximity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNEstimoteProximity.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A15BFF0B1E59B4A3D1ADA151 /* Pods-RNEstimoteProximity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNEstimoteProximity.release.xcconfig"; path = "../../../../../../../../gt/beacon-react-native-proximity/ios/Pods/Target Support Files/Pods-RNEstimoteProximity/Pods-RNEstimoteProximity.release.xcconfig"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* RNEstimoteProximity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNEstimoteProximity.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNEstimoteProximity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNEstimoteProximity.m; sourceTree = "<group>"; };
+		C3539BC080B365C3C77D8AD4 /* Pods-RNEstimoteProximity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNEstimoteProximity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNEstimoteProximity/Pods-RNEstimoteProximity.debug.xcconfig"; sourceTree = "<group>"; };
+		F4C70C62B51693F9296E856A /* libPods-RNEstimoteProximity.a */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = archive.ar; name = "libPods-RNEstimoteProximity.a"; path = "../../../Library/Developer/Xcode/DerivedData/example-biwghndojpfdzjejstjdrhaamqnm/Build/Products/Debug-iphoneos/libPods-RNEstimoteProximity.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +56,26 @@
 				B3E7B5881CC2AC0600A0062D /* RNEstimoteProximity.h */,
 				B3E7B5891CC2AC0600A0062D /* RNEstimoteProximity.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				F049E9C5AF8CEBB276BE7A8B /* Pods */,
+				EB54E66F08E91456A8C41ED5 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		EB54E66F08E91456A8C41ED5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4C70C62B51693F9296E856A /* libPods-RNEstimoteProximity.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F049E9C5AF8CEBB276BE7A8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3539BC080B365C3C77D8AD4 /* Pods-RNEstimoteProximity.debug.xcconfig */,
+				A15BFF0B1E59B4A3D1ADA151 /* Pods-RNEstimoteProximity.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -63,6 +85,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNEstimoteProximity" */;
 			buildPhases = (
+				F812C5B9268079ABDC410DCC /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -106,6 +129,31 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F812C5B9268079ABDC410DCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNEstimoteProximity-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
@@ -218,6 +266,7 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3539BC080B365C3C77D8AD4 /* Pods-RNEstimoteProximity.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -235,6 +284,7 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A15BFF0B1E59B4A3D1ADA151 /* Pods-RNEstimoteProximity.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

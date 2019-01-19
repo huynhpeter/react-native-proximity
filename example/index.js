@@ -10,12 +10,17 @@ import * as RNEP from "@estimote/react-native-proximity";
 
 // generate Estimote Cloud credentials for your app at:
 // https://cloud.estimote.com/#/apps/add/your-own-app
-const ESTIMOTE_APP_ID = "<#APP_ID#>";
-const ESTIMOTE_APP_TOKEN = "<#APP_TOKEN#>";
+
+// billboard credentials
+// const ESTIMOTE_APP_ID = "digital-billboard-app-026";
+// const ESTIMOTE_APP_TOKEN = "d6056fd23e22b958f7d478b2196e2c11";
+// Peters test app 
+const ESTIMOTE_APP_ID = "peter-s-beacon-app-dog";
+const ESTIMOTE_APP_TOKEN = "d332a689a09696e07800d005c6be872b";
 
 // will trigger when the user is within ~ 5 m of any beacon with tag "lobby"
 // you can add tags to your beacons on https://cloud.estimote.com, in Beacon Settings
-const zone1 = new RNEP.ProximityZone(5, "lobby");
+const zone1 = new RNEP.ProximityZone(1, "mint-leaf");
 zone1.onEnterAction = context => {
   // context properties are:
   // - attachments: all the key-value attachments assigned in Estimote Cloud to the beacon that triggered the action
@@ -47,7 +52,7 @@ zone1.onChangeAction = contexts => {
   console.log("zone1 onChange", contexts);
 };
 
-const zone2 = new RNEP.ProximityZone(5, "conf-room");
+const zone2 = new RNEP.ProximityZone(5, "ice-ice-baby");
 zone2.onEnterAction = context => {
   console.log("zone2 onEnter", context);
 };
@@ -105,6 +110,8 @@ RNEP.locationPermission.request().then(
 
       RNEP.proximityObserver.initialize(credentials, config);
       RNEP.proximityObserver.startObservingZones([zone1, zone2]);
+      // peter
+      // zone1.onEnterAction();
     }
   },
   error => {
